@@ -1,0 +1,5 @@
+
+images:
+  myimage:
+    units:
+      - build: echo "Hello, world!" > /dest/greeting
