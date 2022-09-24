@@ -3,3 +3,5 @@ images:
   myimage:
     units:
       - build: echo "Hello, world!" > /dest/greeting
+      - build: echo "Bonjour!" > /dest/greeting.fr
+      - build: echo "G'Day!" > /dest/greeting.en_AU
