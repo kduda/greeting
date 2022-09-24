@@ -1,5 +1,11 @@
 
 images:
+  lib:
+    units:
+      - build: |
+          gcc -c greeting.c
+          gcc -o /dest/libgreeting.so greeting.o
+
   myimage:
     units:
       - build: echo "Hello, world!" > /dest/greeting
