@@ -3,13 +3,15 @@ images:
   floor:
     units:
       - image: barney.ci/alpine%pkg/coreutils
+      - image: barney.ci/alpine%pkg/musl-dev
       - image: barney.ci/alpine%pkg/gcc
   lib:
     units:
       - floor: .%floor
         build: |
-          gcc -c greeting.c
-          gcc -o /dest/libgreeting.so greeting.o
+          gcc -c greet.c
+          mkdir -p /dest/lib
+          gcc -shared -o /dest/lib/libgreet.so greet.o
 
   myimage:
     units:
